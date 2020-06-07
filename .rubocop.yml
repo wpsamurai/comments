@@ -22,3 +22,15 @@ Style/Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Metrics/MethodLength:
+  Enabled: false
