@@ -1,0 +1,14 @@
+<h1>Jobs</h1>
+
+<%= button_to 'Start new job', jobs_path, method: :post %>
+<%= button_to 'Reset imported data', reset_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+      Status: <%= link_to job.status, job_path(job) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'View users', users_path %>

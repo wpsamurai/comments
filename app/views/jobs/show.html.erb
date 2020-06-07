@@ -1,0 +1,15 @@
+<h1>Job details</h1>
+
+Status: <%= @job.status %> <br/>
+Finished at: <%= @job.finished_at %> <br/>
+
+<% if @job.summary[:errors].present? %>
+  <h3>Import errors</h3>
+  <ul>
+    <% @job.summary[:errors].each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
