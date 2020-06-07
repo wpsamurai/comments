@@ -1,24 +1,27 @@
-# README
+# Comments
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+Simple app to fetch users, posts and comments from https://jsonplaceholder.typicode.com
 
-Things you may want to cover:
+## Local installation guide
 
-* Ruby version
+Install required gems
+```
+bundle install
+```
 
-* System dependencies
+Start rails server
+```
+rails s
+```
 
-* Configuration
+Open main page in browser
+```
+http://localhost:3000
+```
 
-* Database creation
+##Usage
+Run job to import data from the main page.
+Visit users, posts and comments pages.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Before next import, reset previously imported data.
