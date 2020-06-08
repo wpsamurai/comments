@@ -34,3 +34,12 @@ Layout/IndentationConsistency:
 
 Metrics/MethodLength:
   Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+RSpec/AlignRightLetBrace:
+  Enabled: false
+
+RSpec/AlignLeftLetBrace:
+  Enabled: false
