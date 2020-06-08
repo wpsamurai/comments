@@ -17,13 +17,13 @@ module Import
 
         private
 
-        def post_hash(post)
-          {
-            title: post['title'],
-            external_id: post['id'],
-            user_id: User.find_by(external_id: post['userId'])&.id
-          }
-        end
+          def post_hash(post)
+            {
+              title: post['title'],
+              external_id: post['id'],
+              user_id: User.find_by(external_id: post['userId'])&.id
+            }
+          end
       end
     end
   end
