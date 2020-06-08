@@ -7,12 +7,14 @@ Simple app to fetch users, posts and comments from https://jsonplaceholder.typic
 
 Install required gems
 ```
-bundle install
+$ bundle install
+$ rails db:create
+$ rails db:migrate
 ```
 
 Start rails server
 ```
-rails s
+$ rails s
 ```
 
 Open main page in browser
@@ -20,7 +22,7 @@ Open main page in browser
 http://localhost:3000
 ```
 
-##Usage
+## Usage
 Run job to import data from the main page.
 Visit users, posts and comments pages.
 
