@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_06_07_175736) do
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["external_id"], name: "index_comments_on_external_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["source", "external_id"], name: "index_comments_on_source_and_external_id"
   end
@@ -42,7 +41,6 @@ ActiveRecord::Schema.define(version: 2020_06_07_175736) do
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["external_id"], name: "index_posts_on_external_id"
     t.index ["source", "external_id"], name: "index_posts_on_source_and_external_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
@@ -55,7 +53,6 @@ ActiveRecord::Schema.define(version: 2020_06_07_175736) do
     t.string "source"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["external_id"], name: "index_users_on_external_id"
     t.index ["source", "external_id"], name: "index_users_on_source_and_external_id"
   end
 
