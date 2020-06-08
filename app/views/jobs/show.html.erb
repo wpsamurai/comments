@@ -12,4 +12,8 @@ Finished at: <%= @job.finished_at %> <br/>
       </li>
     <% end %>
   </ul>
+<% else %>
+  <p>No errors</p>
 <% end %>
+
+<%= link_to 'Jobs index', jobs_path %>

@@ -6,7 +6,7 @@
 <ul>
   <% @jobs.each do |job| %>
     <li>
-      Status: <%= link_to job.status, job_path(job) %>
+      Job id: <%= job.id %> (status: <%= link_to job.status, job_path(job) %>)
     </li>
   <% end %>
 </ul>
