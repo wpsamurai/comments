@@ -3,6 +3,8 @@ module Import
     def import
       posts = []
       data.each do |post_hash|
+        next if already_imported?(post_hash[:external_id])
+
         post = ::Post.new(post_hash)
 
         if post.valid?
@@ -21,6 +23,10 @@ module Import
 
       def data
         @data ||= @source.posts
+      end
+
+      def already_imported?(external_id)
+        Post.exists?(external_id: external_id)
       end
   end
 end

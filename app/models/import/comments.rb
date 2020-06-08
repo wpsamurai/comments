@@ -3,6 +3,8 @@ module Import
     def import
       comments = []
       data.each do |comment_hash|
+        next if already_imported?(comment_hash[:external_id])
+
         comment = ::Comment.new(comment_hash)
 
         if comment.valid?
@@ -21,6 +23,10 @@ module Import
 
       def data
         @data ||= @source.comments
+      end
+
+      def already_imported?(external_id)
+        Comment.exists?(external_id: external_id)
       end
   end
 end
